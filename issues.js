@@ -1,20 +1,29 @@
 const issuesNumber = document.getElementById("issuesNumber");
 const allIsues = document.getElementById("allIsues");
-// function calculateCount() {
-//   issues.innerText = allCardSection.children.length;
-// }
-// calculateCount();
-
-// const allIsues = document.getElementById("allIsues");
+const loadingSpiner = document.getElementById("loadingSpiner");
+// show spiner
+function manageSpiner(show) {
+  if (show) {
+    loadingSpiner.classList.remove("hidden");
+    loadingSpiner.classList.add("flex");
+  } else {
+    // hide spiner
+    loadingSpiner.classList.remove("flex");
+    loadingSpiner.classList.add("hidden");
+  }
+}
 async function loadAllIssues() {
+  manageSpiner(true);
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
   );
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1000);
+  });
   const data = await res.json();
-  console.log(data);
+  manageSpiner(false);
   issuesNumber.innerText = data.data.length;
   data.data.forEach((issues) => {
-    console.log(issues);
     const div = document.createElement("div");
     div.innerHTML = `
         
