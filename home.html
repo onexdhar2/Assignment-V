@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Issues Tracker</title>
+    <!-- daisy uui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font added -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- cdn -->
+    <!-- css added -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="navbar bg-base-100 shadow-sm flex justify-between p-6">
+        <div class="flex justify-center items-center">
+          <img class="w-15" src="./assets/github-logo.png" alt="" />
+          <a class="btn btn-ghost text-xl">GitHub Issues Tracker</a>
+        </div>
+        <div class="flex gap-2">
+          <input
+            type="text"
+            placeholder="Search issues..."
+            class="input input-bordered w-24 md:w-auto"
+          />
+          <div class="">
+            <button class="btn btn-primary text-[16px]">+ New Issue</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+    <!-- ............. -->
+    <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-6">
+      <!-- Titles -->
+      <section
+        class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-10 bg-base-100 shadow-sm p-5"
+      >
+        <div class="tabs flex gap-5">
+          <button
+            id="allIssues"
+            class="btn btn-dash pl-10 pr-10 text-white bg-[#4A00FF]"
+          >
+            All
+          </button>
+          <!-- Categories container -->
+          <div id="categoriesContainer" class="space-y-3">
+            <!-- Categories will be dynamically loaded here by JS -->
+          </div>
+          <button id="open" class="btn btn-dash pl-10 pr-10 text-black">
+            Open
+          </button>
+          <button id="closed" class="btn btn-dash pl-10 pr-10 text-black">
+            Closed
+          </button>
+        </div>
+      </section>
+      <!-- Titles -->
+
+      <!-- Issues -->
+      <section class="bg-base-100 shadow-sm flex justify-between p-5 mb-10">
+        <div class="flex justify-center items-center gap-5">
+          <img src="./assets/Aperture.png" alt="" />
+          <div>
+            <h2 class="font-semibold text-xl">
+              <span id="issues">50</span> Issues
+            </h2>
+            <p class="text-[16px] text-[#64748B]">
+              Track and manage your project issues
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-10 justify-center items-center">
+          <h3><i class="fa-solid fa-circle text-green-700"></i> Open</h3>
+          <h3><i class="fa-solid fa-circle text-violet-700"></i> Closed</h3>
+        </div>
+      </section>
+      <!-- Issues -->
+    </main>
+
+    <script src="./issues.js"></script>
+  </body>
+</html>
