@@ -59,15 +59,11 @@
       >
         <div class="tabs flex gap-5">
           <button
-            id="allIssues"
+            id="all"
             class="btn btn-dash pl-10 pr-10 text-white bg-[#4A00FF]"
           >
             All
           </button>
-          <!-- Categories container -->
-          <div id="categoriesContainer" class="space-y-3">
-            <!-- Categories will be dynamically loaded here by JS -->
-          </div>
           <button id="open" class="btn btn-dash pl-10 pr-10 text-black">
             Open
           </button>
@@ -84,7 +80,7 @@
           <img src="./assets/Aperture.png" alt="" />
           <div>
             <h2 class="font-semibold text-xl">
-              <span id="issues">50</span> Issues
+              <span id="issuesNumber">0</span> Issues
             </h2>
             <p class="text-[16px] text-[#64748B]">
               Track and manage your project issues
@@ -97,7 +93,16 @@
         </div>
       </section>
       <!-- Issues -->
+
+      <!-- ............allcards.................. -->
+      <section id="allIsues" class="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
+        <!-- Categories container -->
+        
+
+        <!-- card 1 -->
+      </section>
     </main>
+    <!-- ............allcards.................. -->
 
     <script src="./issues.js"></script>
   </body>
