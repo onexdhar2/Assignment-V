@@ -1,6 +1,7 @@
 const issuesNumber = document.getElementById("issuesNumber");
 const allIsues = document.getElementById("allIsues");
 const loadingSpiner = document.getElementById("loadingSpiner");
+
 // show spiner
 function manageSpiner(show) {
   if (show) {
@@ -68,3 +69,42 @@ async function loadAllIssues() {
   });
 }
 loadAllIssues();
+
+// button toggling
+
+// function toggle(id) {
+//   all.classList.add(" text-white bg-[#4A00FF]");
+//   open.classList.add(" text-white bg-[#4A00FF]");
+//   close.classList.add(" text-white bg-[#4A00FF]");
+
+//   all.classList.remove(" text-black bg-white");
+//   open.classList.remove(" text-black bg-white");
+//   close.classList.remove(" text-black bg-white");
+
+//   const selected = document.getElementById(id);
+
+//   selected.classList.remove(" text-white bg-[#4A00FF]");
+//   selected.classList.add(" text-black bg-white");
+// }
+
+// button toogolling
+// catch all three sub element to filter
+const allFilter = document.getElementById("all-filter");
+const interviewFilter = document.getElementById("interview-filter");
+const rejectFilter = document.getElementById("reject-filter");
+function toggleStyle(id) {
+  allFilter.classList.remove("text-white", "bg-[#4A00FF]");
+  interviewFilter.classList.remove("text-white", "bg-[#4A00FF]");
+  rejectFilter.classList.remove("text-white", "bg-[#4A00FF]");
+
+  allFilter.classList.add("text-black");
+  interviewFilter.classList.add("text-black");
+  rejectFilter.classList.add("text-black");
+
+  const selected = document.getElementById(id);
+  currentStatus = id;
+
+  selected.classList.add("text-white", "bg-[#4A00FF]");
+  selected.classList.remove("text-black");
+}
+// button toogolling
