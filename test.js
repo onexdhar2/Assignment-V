@@ -148,9 +148,10 @@ async function openIssue(issue1) {
     ` https://phi-lab-server.vercel.app/api/v1/lab/issue/33${issue1}`,
   );
   const data = await res.json();
-  const issueDetails = data.id;
+  const issueDetails = data.data;
 
   my_modal_5.showModal();
-  heading.textContent = issueDetails.title;
+  heading.innerText = issueDetails;
 }
+
 // button toogolling
