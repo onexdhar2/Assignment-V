@@ -10,7 +10,10 @@ document.getElementById("sign-button").addEventListener("click", () => {
   // match pin and mobile number
   if (getName == "admin" && getPass == "admin123") {
     // true :alert >homepage
-    window.location.assign("/home.html");
+    window.location.assign("./home.html");
+    // window.location.assign(
+    //   "https://shommokhastagir6224.github.io/B13-A5-Github-Issue-Tracker/home.html",
+    // );
   }
   // false:alert >goback
   else {
